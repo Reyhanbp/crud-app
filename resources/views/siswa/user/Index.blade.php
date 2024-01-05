@@ -30,7 +30,6 @@
                     <thead>
                         <tr>
                             <th>Nomer</th>
-                            <th>NIS</th>
                             <th>Nama</th>
                             <th>Alamat</th>
                             <th>NISN</th>
@@ -38,7 +37,6 @@
                             <th>Jurusan</th>
                             <th>NO Telpon</th>
                             <th>Photo</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
                     @foreach ($data as $master_siswas)
@@ -62,7 +60,7 @@
                             <form action="{{ route('delete-siswa', $master_siswas->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <a class="btn btn-warning" role="button"  href="{{ route ('edit-siswa', $master_siswas->id) }}">
+                                <a class="btn btn-warning" role="button"  href="{{ route ('edit-usersiswa', $master_siswas->id) }}">
                                     <i class="fas fa-edit"></i>
                                     Edit
                                  </a>

@@ -14,13 +14,12 @@ class Role
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next, $role)
+    public function handle($request, Closure $next, ...$roles)
     {
-        if ($request->user()->role == $role) {
+        if (auth()->check() && in_array(auth()->user()->role, $roles)) {
             return $next($request);
         }
- 
-        return redirect()
-            ->to(route('login'));
+
+        return redirect()->back();
     }
 }

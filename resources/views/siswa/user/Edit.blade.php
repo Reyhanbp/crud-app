@@ -5,7 +5,7 @@
     <div class="card-header">
     <div class="card-title w-100 d-flex justify-content-between">
         <h3>Edit Siswa </h3>
-          <a class="btn btn-danger" href="{{ route ('siswa') }}">
+          <a class="btn btn-danger" href="{{ route ('usersiswa') }}">
           <i class="fas fa-times-circle"></i>
             Batal
           </a>
@@ -26,7 +26,7 @@
         <div class="card-header py-3">
           <h6 class="m-0 font-weight-bold text-primary">DATA BARU</h6>
         </div>
-        <form action="{{ route ('update-siswa', $siswa->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route ('update-usersiswa', $siswa->id) }}" method="POST" enctype="multipart/form-data">
           @csrf
 
         <div class="card-body">

@@ -5,7 +5,7 @@
     <div class="card-header">
     <div class="card-title w-100 d-flex justify-content-between">
         <h3>Tambah Siswa </h3>
-          <a class="btn btn-danger"  href="{{ route ('siswa') }}">
+          <a class="btn btn-danger"  href="{{ route ('usersiswa') }}">
           <i class="fas fa-times-circle"></i>
             Batal
           </a>
